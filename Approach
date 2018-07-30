@@ -1,0 +1,20 @@
+Approach:
+
+Training:
+
+1. Using the masks, create a collection of "highlighted" images-- images with the salt or not-salt left as is and the rest colored black
+
+2. Create a CNN to determine whether the given image is salt or not salt-- train CNN to good accuracy
+
+
+Testing:
+
+1. Using CV2, detect major edges in the salt picture
+
+2. Using edges, break picture into tinier sub-pictures
+
+3. Pass sub-pictures to CNN above to classify
+
+4. Stitch sub-pictures back together to visualize performance
+
+5. RLE picture and push to excel file
