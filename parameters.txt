@@ -1,0 +1,16 @@
+Libraries:
+	OpenCV:
+		Canny:
+			L2gradient: False (More edges, messier), True (less edges, cleaner)
+			apertureSize: 3 (least edges)
+			threshold1, 2: ~250, +10 (cleanest AND most captured edges)
+			apertureSize: 5 (more edges)
+			threshold1, 2: ~3500, +100 (cleanest AND most captured edges)
+                        apertureSize: 7 (most edges)
+                        threshold1, 2: ~53000, +100 (cleanest AND most captured edges)
+		HoughLinesP:
+			rho: 1
+			theta: pi/180
+			threshold: 5-->10 (messy), 15-->20 (most representative view), 25-->30 (few lines)
+			minLineLength: 5 (small lines only), 10+ (medium/large lines only)
+			maxLineGap: 5-->10 (lines will better fit a curve), 15+ (lines are long and cover most of image)
